@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diventa Shopping Influencer - Guadagni Illimitati nel Mondo dello Shopping</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        .hero { background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); color: white; text-align: center; padding: 120px 20px; }
+        .hero h1 { font-size: 2.8em; margin-bottom: 20px; }
+        .hero p { font-size: 1.3em; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .cta-primary { background: #28a745; color: white; padding: 18px 40px; font-size: 1.2em; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; box-shadow: 0 5px 15px rgba(40,167,69,0.3); }
+        .cta-primary:hover { background: #218838; }
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { text-align: center; font-size: 2.5em; margin-bottom: 50px; color: #333; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+        .card h3 { font-size: 1.5em; margin-bottom: 15px; color: #ff7e5f; }
+        .pricing { background: #f8f9fa; }
+        .pricing-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .price-card { background: white; border: 3px solid #ff7e5f; border-radius: 15px; padding: 30px; text-align: center; position: relative; }
+        .price-card.featured { border-color: #28a745; transform: scale(1.05); }
+        .price-amount { font-size: 3em; font-weight: bold; color: #28a745; margin: 20px 0; }
+        .stats { background: #e8f4fd; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 40px; }
+        .stat { }
+        .stat-number { font-size: 3em; font-weight: bold; color: #ff7e5f; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2em; } .price-amount { font-size: 2.2em; } }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Influenzare gli Acquisti: Il Business del Futuro</h1>
+        <p>Entra nel settore più grande al mondo: lo SHOPPING. Diventa Creator con soli 49€/mese e crea guadagni illimitati costruendo la tua community di clienti, creator e aziende partner.</p>
+        <a href="https://wa.me/3489291264?text=Ciao,%20voglio%20diventare%20Creator!" class="cta-primary">Inizia Ora - Solo 49€/mese</a>
+    </section>
+
+    <!-- Vantaggi Membership -->
+    <section class="section">
+        <h2>Cosa Ottieni con la Tua Membership da 49€/mese</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Cashback Illimitato</h3>
+                <p>Su oltre 10 milioni di aziende online/offline. Risparmia tu e i tuoi clienti.</p>
+            </div>
+            <div class="card">
+                <h3>2. Bonus Referral</h3>
+                <p>1% bonus sugli acquisti dei nuovi clienti che iscrivi + affilia altri Creator.</p>
+            </div>
+            <div class="card">
+                <h3>3. Affilia Aziende</h3>
+                <p>399€ una tantum per azienda partner: pagato al 100% al Creator che l’affilia.</p>
+            </div>
+            <div class="card">
+                <h3>4. Marketing Boost</h3>
+                <p>Fino al 50% dalle aziende partner su ogni cliente raccomandato + 1% fatturato mensile (rendita passiva).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scala Guadagni -->
+    <section class="section pricing">
+        <h2>Guadagni Mensili dalla Tua Community</h2>
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">Basato su volumi shopping della tua rete. Nessun limite!</p>
+        <div class="pricing-table">
+            <div class="price-card">
+                <h3>Livello 1</h3>
+                <div class="price-amount">70€/mese</div>
+            </div>
+            <div class="price-card">
+                <h3>Livello 2</h3>
+                <div class="price-amount">270€/mese</div>
+            </div>
+            <div class="price-card featured">
+                <h3>Livello 3</h3>
+                <div class="price-amount">700€/mese</div>
+                <p style="font-weight: bold;">Più grande la community, più grandi i guadagni!</p>
+            </div>
+            <div class="price-card">
+                <h3>Livello 11</h3>
+                <div class="price-amount">500.000€/mese</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://wa.me/3489291264?text=Info%20scala%20guadagni!" class="cta-primary">Calcola il Tuo Potenziale</a>
+        </div>
+    </section>
+
+    <!-- Risultati -->
+    <section class="section stats">
+        <h2>Già in Azione: Crescita Esplosiva</h2>
+        <p style="text-align: center; font-size: 1.2em;">Progetto italiano (normative OK), inquadrati come consulenti marketing.</p>
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">3000+</div>
+                <p>Creator attivi</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5000+</div>
+                <p>Clienti</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <p>Aziende partner</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; font-size: 1.1em; font-style: italic;">Iniziato 4 mesi fa... siamo solo all’inizio di qualcosa di ENORME!</p>
+    </section>
+
+    <!-- CTA Finale -->
+    <section class="hero" style="padding: 80px 20px;">
+        <h2>Non Aspettare: La Tua Community Ti Aspetta</h2>
+        <p style="font-size: 1.3em;">Iscriviti oggi e inizia a scalare i tuoi guadagni.</p>
+        <a href="https://wa.me/3489291264?text=Pronti%20per%20iniziare%20come%20Creator!" class="cta-primary" style="font-size: 1.3em; padding: 20px 50px;">Diventa Creator Ora</a>
+    </section>
+
+    <!-- Meta Pixel (sostituisci ID) -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
+    </script>
+</body>
+</html>
