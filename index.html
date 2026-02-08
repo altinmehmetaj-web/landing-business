@@ -3,122 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diventa Shopping Influencer - Guadagni Illimitati nel Mondo dello Shopping</title>
+    <title>Shopping Influencer - Guadagni Illimitati 🔥</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
-        .hero { background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); color: white; text-align: center; padding: 120px 20px; }
-        .hero h1 { font-size: 2.8em; margin-bottom: 20px; }
-        .hero p { font-size: 1.3em; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .cta-primary { background: #28a745; color: white; padding: 18px 40px; font-size: 1.2em; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; box-shadow: 0 5px 15px rgba(40,167,69,0.3); }
-        .cta-primary:hover { background: #218838; }
-        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
-        .section h2 { text-align: center; font-size: 2.5em; margin-bottom: 50px; color: #333; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-        .card h3 { font-size: 1.5em; margin-bottom: 15px; color: #ff7e5f; }
-        .pricing { background: #f8f9fa; }
-        .pricing-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
-        .price-card { background: white; border: 3px solid #ff7e5f; border-radius: 15px; padding: 30px; text-align: center; position: relative; }
-        .price-card.featured { border-color: #28a745; transform: scale(1.05); }
-        .price-amount { font-size: 3em; font-weight: bold; color: #28a745; margin: 20px 0; }
-        .stats { background: #e8f4fd; text-align: center; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 40px; }
-        .stat { }
-        .stat-number { font-size: 3em; font-weight: bold; color: #ff7e5f; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.2em; } .price-amount { font-size: 2.2em; } }
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        
+        /* Palette Calda */
+        :root {
+            --primary-gold: #F4A261;
+            --accent-orange: #E76F51;
+            --deep-orange: #F77F00;
+            --warm-red: #D00000;
+            --bg-warm: #FFF8F0;
+            --card-shadow: 0 20px 60px rgba(231,111,81,0.2);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-orange) 50%, var(--deep-orange) 100%);
+            color: white; 
+            text-align: center; 
+            padding: 150px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff11"/><stop offset="100%" stop-color="%23ffffff00"/></radialGradient></defs><circle cx="20" cy="20" r="15" fill="url(%23g)"><animate attributeName="r" values="15;20;15" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="80" r="12" fill="url(%23g)"><animate attributeName="r" values="12;16;12" dur="3s" repeatCount="indefinite" begin="0.5s"/></circle></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+        
+        .hero h1 { 
+            font-size: clamp(2.5em, 5vw, 4em); 
+            font-weight: 700; 
+            margin-bottom: 20px; 
+            animation: slideInUp 1s ease-out; 
+        }
+        .hero-subtitle { 
+            font-size: clamp(1.1em, 3vw, 1.5em); 
+            margin-bottom: 30px; 
+            opacity: 0.95; 
+            animation: slideInUp 1s ease-out 0.2s both; 
+        }
+        @keyframes slideInUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
+        .cta-hero { 
+            background: linear-gradient(45deg, #ffffff, #f8f9fa); 
+            color: var(--deep-orange); 
+            padding: 20px 50px; 
+            font-size: 1.3em; 
+            font-weight: 600; 
+            border: none; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: inline-block; 
+            box-shadow: var(--card-shadow);
+            animation: pulse 2s infinite; 
+            transition: all 0.3s ease;
+        }
+        .cta-hero:hover { transform: scale(1.05); box-shadow: 0 25px 80px rgba(244,162,97,0.4); }
+        @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.02);} }
+        
+        .section { padding: 100px 20px; }
+        .section h2 { 
+            text-align: center; 
+            font-size: clamp(2em, 4vw, 3em); 
+            margin-bottom: 60px; 
+            background: linear-gradient(45deg, var(--accent-orange), var(--warm-red)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+        }
+        
+        .features { background: var(--bg-warm); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .feature-card { 
+            background: white; 
+            padding: 50px 30px; 
+            border-radius: 25px; 
+            text-align: center; 
+            box-shadow: var(--card-shadow); 
+            transform: translateY(30px); 
+            opacity: 0; 
+            transition: all 0.6s ease; 
+        }
+        .feature-card.animate { transform: translateY(0); opacity: 1; }
+        .feature-card:hover { transform: translateY(-15px); box-shadow: 0 30px 90px rgba(231,111,81,0.3); }
+        .feature-icon { font-size: 4em; margin-bottom: 20px; }
+        
+        .guadagni { 
+            background: linear-gradient(135deg, var(--primary-gold), var(--accent-orange)); 
+            color: white; 
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .guadagni-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+        .guadagni h3 { font-size: 2.5em; margin-bottom: 20px; }
+        
+        .stats { 
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin: 60px 0; 
+        }
+        .stat { text-align: center; }
+        .stat-number { 
+            font-size: clamp(2.5em, 6vw, 4em); 
+            font-weight: 700; 
+            background: linear-gradient(45deg, white, #ffedcc); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        
+        .cta-final { 
+            text-align: center; 
+            padding: 100px 20px; 
+            background: var(--warm-red); 
+            color: white; 
+        }
+        @media (max-width: 768px) { .hero { padding: 100px 20px 80px; } .stats { flex-direction: column; align-items: center; } }
     </style>
 </head>
 <body>
-    <!-- Hero -->
+    <!-- Hero Interattivo -->
     <section class="hero">
-        <h1>Influenzare gli Acquisti: Il Business del Futuro</h1>
-        <p>Entra nel settore più grande al mondo: lo SHOPPING. Diventa Creator con soli 49€/mese e crea guadagni illimitati costruendo la tua community di clienti, creator e aziende partner.</p>
-        <a href="https://wa.me/3489291264?text=Ciao,%20voglio%20diventare%20Creator!" class="cta-primary">Inizia Ora - Solo 49€/mese</a>
+        <h1>🔥 Guadagni ILLIMITATI Influenzando lo Shopping</h1>
+        <p class="hero-subtitle">Entra nel settore #1 al mondo con 49€/mese. Costruisci la tua community → Clienti, Creator, Aziende → Rendite Passive Esplosive!</p>
+        <a href="https://wa.me/3489291264?text=Ciao!%20Pronto%20a%20iniziare%20come%20Shopping%20Influencer%20🔥" class="cta-hero">🚀 Inizia GRATIS su WhatsApp - 3489291264</a>
     </section>
 
-    <!-- Vantaggi Membership -->
-    <section class="section">
-        <h2>Cosa Ottieni con la Tua Membership da 49€/mese</h2>
+    <!-- Features Animate -->
+    <section class="section features">
+        <h2>Il Tuo Kit per il Successo</h2>
         <div class="grid">
-            <div class="card">
-                <h3>1. Cashback Illimitato</h3>
-                <p>Su oltre 10 milioni di aziende online/offline. Risparmia tu e i tuoi clienti.</p>
+            <div class="feature-card">
+                <div class="feature-icon">🛒</div>
+                <h3>Cashback 10M+ Negozi</h3>
+                <p>Risparmia tu e i tuoi clienti ovunque comprano.</p>
             </div>
-            <div class="card">
-                <h3>2. Bonus Referral</h3>
-                <p>1% bonus sugli acquisti dei nuovi clienti che iscrivi + affilia altri Creator.</p>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>1% Bonus Clienti + Creator</h3>
+                <p>Guadagna su referral e costruisci la tua rete.</p>
             </div>
-            <div class="card">
-                <h3>3. Affilia Aziende</h3>
-                <p>399€ una tantum per azienda partner: pagato al 100% al Creator che l’affilia.</p>
+            <div class="feature-card">
+                <div class="feature-icon">🏢</div>
+                <h3>399€ per Aziende Partner</h3>
+                <p>100% tuo quando affilia. + Marketing Boost 50%!</p>
             </div>
-            <div class="card">
-                <h3>4. Marketing Boost</h3>
-                <p>Fino al 50% dalle aziende partner su ogni cliente raccomandato + 1% fatturato mensile (rendita passiva).</p>
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3>Rendita Passiva 1% Fatturato</h3>
+                <p>Più aziende = Più guadagni MENSILI automatici.</p>
             </div>
         </div>
     </section>
 
-    <!-- Scala Guadagni -->
-    <section class="section pricing">
-        <h2>Guadagni Mensili dalla Tua Community</h2>
-        <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">Basato su volumi shopping della tua rete. Nessun limite!</p>
-        <div class="pricing-table">
-            <div class="price-card">
-                <h3>Livello 1</h3>
-                <div class="price-amount">70€/mese</div>
+    <!-- Guadagni -->
+    <section class="section guadagni">
+        <div class="guadagni-inner">
+            <h2>💰 Guadagni ILLIMITATI</h2>
+            <p style="font-size: 1.4em; margin-bottom: 40px;">Dalla tua community: più crei volume shopping → più scala automatica!</p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">3000+</div>
+                    <p>Creator Attivi</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <p>Aziende Partner</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4 Mesi</div>
+                    <p>Già Esplosione</p>
+                </div>
             </div>
-            <div class="price-card">
-                <h3>Livello 2</h3>
-                <div class="price-amount">270€/mese</div>
-            </div>
-            <div class="price-card featured">
-                <h3>Livello 3</h3>
-                <div class="price-amount">700€/mese</div>
-                <p style="font-weight: bold;">Più grande la community, più grandi i guadagni!</p>
-            </div>
-            <div class="price-card">
-                <h3>Livello 11</h3>
-                <div class="price-amount">500.000€/mese</div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://wa.me/3489291264?text=Info%20scala%20guadagni!" class="cta-primary">Calcola il Tuo Potenziale</a>
-        </div>
-    </section>
-
-    <!-- Risultati -->
-    <section class="section stats">
-        <h2>Già in Azione: Crescita Esplosiva</h2>
-        <p style="text-align: center; font-size: 1.2em;">Progetto italiano (normative OK), inquadrati come consulenti marketing.</p>
-        <div class="stats-grid">
-            <div class="stat">
-                <div class="stat-number">3000+</div>
-                <p>Creator attivi</p>
-            </div>
-            <div class="stat">
-                <div class="stat-number">5000+</div>
-                <p>Clienti</p>
-            </div>
-            <div class="stat">
-                <div class="stat-number">500+</div>
-                <p>Aziende partner</p>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 40px; font-size: 1.1em; font-style: italic;">Iniziato 4 mesi fa... siamo solo all’inizio di qualcosa di ENORME!</p>
-    </section>
+        </section>
 
     <!-- CTA Finale -->
-    <section class="hero" style="padding: 80px 20px;">
-        <h2>Non Aspettare: La Tua Community Ti Aspetta</h2>
-        <p style="font-size: 1.3em;">Iscriviti oggi e inizia a scalare i tuoi guadagni.</p>
-        <a href="https://wa.me/3489291264?text=Pronti%20per%20iniziare%20come%20Creator!" class="cta-primary" style="font-size: 1.3em; padding: 20px 50px;">Diventa Creator Ora</a>
+    <section class="cta-final">
+        <h2>Il Momento È ORA 🔥</h2>
+        <p style="font-size: 1.3em; margin-bottom: 40px;">Non aspettare: 49€/mese per un business senza limiti!</p>
+        <a href="https://wa.me/3489291264?text=Inizia%20come%20Creator!%20Shopping%20Influencer%20🔥" class="cta-hero" style="background: linear-gradient(45deg, #FFD700, white); color: var(--deep-orange);">📱 Chiama 3489291264 - START GRATIS</a>
     </section>
 
-    <!-- Meta Pixel (sostituisci ID) -->
     <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
+        // Scroll Animations Interattive
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        });
+        document.querySelectorAll('.feature-card').forEach(card => observer.observe(card));
+        
+        // Parallax Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector('.hero').style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
     </script>
+    
+    <!-- Meta Pixel -->
+    <script>/* Aggiungi tuo Pixel ID */</script>
 </body>
 </html>
