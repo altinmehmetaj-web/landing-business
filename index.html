@@ -11,11 +11,21 @@
         
         /* Palette Calda */
         :root {
-            /* 🔥 BORDO ARANCIONE VIDEO + TOGLI CERCHIO */
+/* 🔥 BORDO ARANCIONE + CERCHIO NASCOSTO DEFINITIVO */
 .video-hero iframe {
     border: 6px solid var(--accent-orange) !important;
     border-radius: 20px !important;
-    box-shadow
+}
+
+/* Nascondi TUTTI i controlli play YouTube */
+.video-hero iframe::-webkit-media-controls-overlay-play-button,
+.video-hero iframe::-webkit-media-controls-play-button,
+.video-hero iframe::after {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
 }
             --primary-gold: #F4A261;
             --accent-orange: #E76F51;
