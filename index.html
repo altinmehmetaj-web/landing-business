@@ -99,6 +99,37 @@
         .stat-number { font-size: clamp(2.5em, 6vw, 4em); font-weight: 700; background: linear-gradient(45deg, white, #ffedcc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .cta-final { text-align: center; padding: 100px 20px; background: var(--warm-red); color: white; }
         @media (max-width: 768px) { .video-hero { height: 60vh; } .stats { flex-direction: column; align-items: center; } }
+        /* MODAL YOUTUBE */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.9); 
+}
+.modal-content { 
+    position: relative; 
+    background: white; 
+    margin: 5% auto; 
+    padding: 20px; 
+    width: 90%; 
+    max-width: 900px; 
+    border-radius: 15px; 
+}
+.close { 
+    position: absolute; 
+    right: 25px; 
+    top: 15px; 
+    font-size: 35px; 
+    cursor: pointer; 
+    color: #aaa; 
+}
+.close:hover { 
+    color: #000; 
+}
+
          /* TESTIMONIALS SECTION */
 .testimonials-section {
   background: #f9f9f9;
@@ -237,16 +268,23 @@
     </style>
 </head>
 <body>
-    <!-- 🎥 VIDEO HERO INTERATTIVO TOP -->
-    <section class="video-hero">
-        <video autoplay muted loop playsinline poster="https://youtu.be/1UoiYfLkFQg?si=12OVkV-o6f1-skD1/1920x1080/FF7E5F/FFFFFF?text=Il+tua+video">
-            <source src="tuo-video-benvuto.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay">
-            <button class="play-btn" onclick="document.querySelector('video').play()">▶️</button>
-            <h1 style="font-size: clamp(2em, 6vw, 3.5em);">Guarda il Video Benvenuto</h1>
-            <p style="font-size: 1.3em; max-width: 600px;">Scopri in 30 secondi l'opportunità che cambierà il tuo futuro</p>
-        </div>
+        <!-- 🎥 VIDEO HERO YOUTUBE TOP -->
+<section class="video-hero">
+    <div class="video-overlay">
+        <button class="play-btn" onclick="openYouTubeVideo()">▶️</button>
+        <h1 style="font-size: clamp(2em, 6vw, 3.5em);">Guarda il Video Benvenuto</h1>
+        <p style="font-size: 1.3em; max-width: 600px;">Scopri in 30 secondi l'opportunità che cambierà il tuo futuro</p>
+    </div>
+</section>
+
+<!-- MODAL YOUTUBE -->
+<div id="youtube-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="youtube-iframe" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
     </section>
 
     <!-- Hero Principale -->
@@ -395,24 +433,40 @@
                 📱 Chiedi info ora su Whatsapp!
 
     <script>
-        // Video Play Toggle
-        document.querySelector('.play-btn').onclick = () => {
-            const vid = document.querySelector('video');
-            vid[vid.paused ? 'play' : 'pause']();
-        };
-        
-        // Scroll Animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('animate');
-            });
-        });
-        document.querySelectorAll('.feature-card, .freedom-card').forEach(el => observer.observe(el));
-        
-        // Parallax
-        window.addEventListener('scroll', () => {
-            document.querySelector('.hero').style.transform = `translateY(${window.pageYOffset * 0.5}px)`;
-        });
+// 🔴 VIDEO YOUTUBE MODAL (NUOVO)
+document.querySelector('.play-btn').onclick = () => {
+    openYouTubeVideo();
+};
+
+function openYouTubeVideo() {
+    const youtubeId = '1UoiYfLkFQg'; // Il tuo video!
+    document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+    document.getElementById('youtube-modal').style.display = 'block';
+}
+
+// Chiudi modal
+document.querySelector('.close').onclick = () => {
+    document.getElementById('youtube-modal').style.display = 'none';
+    document.getElementById('youtube-iframe').src = '';
+};
+window.onclick = (e) => {
+    if (e.target.id === 'youtube-modal') {
+        document.getElementById('youtube-modal').style.display = 'none';
+        document.getElementById('youtube-iframe').src = '';
+    }
+};
+
+// Scroll Animations (TENI IL TUO)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('animate');
+    });
+});
+document.querySelectorAll('.feature-card, .freedom-card').forEach(el => observer.observe(el));
+
+// Parallax (TENI IL TUO)
+window.addEventListener('scroll', () => {
+    document.querySelector('.
     </script>
 </body>
 </html>
