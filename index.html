@@ -266,13 +266,25 @@ iframe {
   color: #999;
   font-size: 0.9rem;
 }
-
 /* CTA FINALE */
-.testimonials-cta {
-  background: linear-gradient(135deg, #F4A261 0%, #764ba2 100%);
-  padding: 50px 40px;
-  border-radius: 15px;
-  color: white;
+.testimonials-cta, .whatsapp-btn, .cta-green, .btn-whatsapp {
+    background: linear-gradient(135deg, #FF6600, #FFB347) !important;  /* Arancione perfetto */
+    border: 4px solid #FF4500 !important;
+    border-radius: 50px !important;  /* Ovale come quello giallo */
+    box-shadow: 0 12px 35px rgba(255, 102, 0, 0.6) !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 20px 45px !important;
+    font-size: 1.4rem !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.4s ease !important;
+}
+
+.testimonials-cta:hover, .whatsapp-btn:hover {
+    background: linear-gradient(135deg, #FF4500, #FF8C00) !important;
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 0 20px 45px rgba(255, 102, 0, 0.8) !important;
 }
 
 .testimonials-cta h3 {
@@ -495,7 +507,7 @@ iframe {
             <!-- CTA FINALE -->
             <div class="testimonials-cta">
               <h3>Vuoi ottenere gli stessi risultati?</h3>
-              <a href="https://wa.me/393489291264?text=Interessato a Skai Uno, vorrei saperne di più dopo aver visto i feedback" 
+              <a href="https://wa.me/393489291264?text=Interessato/a, vorrei saperne di più dopo aver visto la landin page" 
                  class="btn-testimonial">
                 📱 Chiedi info ora su Whatsapp!
 
