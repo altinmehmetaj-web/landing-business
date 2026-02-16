@@ -56,42 +56,41 @@
             color: white;
             padding: 0 20px;
             pointer-events: none;
-            z-index: 
-        }
-        .video-hero {
-    position: relative !important;  /* Padre per overlay */
+            z-index:  
+    }
+ .hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    margin-bottom: 30px;  /* Spazio prima del video */
+}
+
+.hero-text h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.video-container {
+    position: relative;
     width: 100%;
-    height: 70vh;  /* Altezza fissa per il video */
+    height: 0;
+    padding-bottom: 56.25%;  /* Aspect ratio 16:9 per YouTube */
     overflow: hidden;
 }
 
-.video-hero iframe {
+.video-container iframe {
     position: absolute;
-    top: 5;
-    left: 25;
-    width: 100% !important;
-    height: 100% !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-
-.video-overlay-text {  /* O rinomina se usi un'altra classe */
-    position: absolute !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10 !important;
-    background: rgba(0,0,0,0.6);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.video-overlay-text h1 {
-    font-size: 1.8rem;  /* Piccolo e semplice */
-    color: white !important;
-    text-shadow: 2px 2px 8px black;
-    margin: 0;
-}
-
         .play-btn {
             width: 100px; height: 100px;
             background: rgba(255,255,255,0.9);
@@ -316,6 +315,25 @@
 </head>
 <body>
        <!-- 🎥 VIDEO HERO YOUTUBE EMBED DIRETTO -->
+    <section class="hero-section">
+    <!-- Testo PRIMA del video -->
+    <div class="hero-text">
+        <h1>Inizia oggi a cambiare il tuo stile di vita</h1>
+    </div>
+    <!-- Video DOPO il testo -->
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/1UoiYfLkFQg?autoplay=1&mute=1&loop=1&playlist=1UoiYfLkFQg&controls=1" 
+            frameborder="0" 
+            allowfullscreen 
+            title="Video Benvenuto">
+        </iframe>
+        <div class="video-overlay">
+        <button class="play-btn" >
+        <h1 style="font-size: clamp(2em,
+    </div>
+</section>
+
 <section class="video-hero">
     <iframe 
         src="https://www.youtube.com/embed/1UoiYfLkFQg?autoplay=1&mute=1&loop=1&playlist=1UoiYfLkFQg&controls=1" 
@@ -324,8 +342,7 @@
         style="width: 100%; height: 100%;"
         title="Video Benvenuto">
     </iframe>
-    <div class="video-overlay-text">  <!-- Classe esatta -->
-    <h1>Inizia oggi a cambiare il tuo stile di vita</h1>
+   
 </div>
                                                                         ¢
 <!-- MODAL YOUTUBE -->
