@@ -103,21 +103,7 @@
             transition: all 0.3s;
         }
         .play-btn:hover { transform: scale(1.1); }
-        /* I tuoi stili esistenti... */
-
-/* AGGIUNGI QUI, DOPO .play-btn { ... } */
-.video-container {
-    position: relative;
-}
-
-.video-overlay-click {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 15;
+        
 }
     
         .hero {
@@ -353,10 +339,6 @@
         style="width: 100%; height: 100%;"
         title="Video Benvenuto">
     </iframe>
-     <div class="video-overlay-click">
-        <button class="audio-btn" onclick="enableAudio()">
-            🔊 Clicca per attivare l'audio
-        </button>
     </div>
 </div>
                                                                         
@@ -551,12 +533,6 @@ document.querySelectorAll('.feature-card, .freedom-card').forEach(el => observer
 window.addEventListener('scroll', () => {
     document.querySelector('.
     </script>
-                  <script>
-function enableAudio() {
-    document.getElementById('hero-video').src = 
-    document.getElementById('hero-video').src.replace('&mute=1', '&mute=0');
-    document.querySelector('.video-overlay-click').style.display = 'none';
-}
 </script>
 </body>
 </html>
